@@ -5,9 +5,9 @@ var addToBillBtn= document.querySelector(".addToBillBtn");
 //create a variable that will keep track of the total bill
 
 //referencing the  totals elements
-var callTotalElement=document.querySelector(".callTotalOne");
-var smsTotalElement= document.querySelector(".smsTotalOne");
-var totalElement= document.querySelector(".totalOne");
+var callTotalElements=document.querySelector(".callTotalOne");
+var smsTotalElements= document.querySelector(".smsTotalOne");
+var totalElements= document.querySelector(".totalOne");
 //variable to keep track of call cost
 var callCost=0;
 //variable to keep track of sms cost
@@ -24,17 +24,17 @@ function totalTextBill(){
  else if(billType==="sms"){
    smsCost+=0.75;
  }
- callTotalElement.innerHTML= callCost.toFixed(2);
- smsTotalElement.innerHTML =smsCost.toFixed(2);
+ callTotalElements.innerHTML= callCost.toFixed(2);
+ smsTotalElements.innerHTML =smsCost.toFixed(2);
  var totalCost= callCost + smsCost;
- totalElement.innerHTML= totalCost.toFixed(2);
+ totalElements.innerHTML= totalCost.toFixed(2);
   //check if total exceed 30,then change text to orange
  if(totalCost > 30){
-   totalElement.classList.add("warning");
+   totalElements.classList.add("warning");
  } 
  //check if total exceed 50,then change text to red
   if(totalCost > 50){
-   totalElement.classList.add("danger")
+   totalElements.classList.add("danger")
  }
 
 }

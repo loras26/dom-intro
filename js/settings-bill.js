@@ -1,4 +1,4 @@
-// get a reference to the sms or call radio buttons
+/*// get a reference to the sms or call radio buttons
 var radioBtn= document.querySelector("billItemTypeWithSettings")
 // get refences to all the settings fields
 var callCostSettingsElement= document.querySelector("callCostSetting")
@@ -34,4 +34,4 @@ var totalCost=0;
 // * add nothing for invalid values that is not 'call' or 'sms'.
 // * display the latest total on the screen.
 // * check the value thresholds and display the total value in the right color.
-
+*/
