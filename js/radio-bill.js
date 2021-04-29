@@ -1,12 +1,12 @@
 // get a reference to the sms or call radio button
 var billItemType =document.querySelector(".billItemTypeRadio")
 //get a reference to the add button  
-var addButton= document.querySelector(".billRadioAddBtn")
+var addButton= document.querySelector(".radioBillAddBtn")
 //create a variable that will keep track of the total bill
 //referencing totals elements
 var callTotalElement= document.querySelector(".callTotalTwo")
 var smsTotalElement= document.querySelector(".smsTotalTwo")
-var totalElement= document.querySelector("totalTwo")
+var totalElement= document.querySelector(".totalTwo")
 // variable to track calls total
 var callTotal=0;
 //variable to track  sms's total

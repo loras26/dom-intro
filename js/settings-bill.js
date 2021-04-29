@@ -1,18 +1,18 @@
 // get a reference to the sms or call radio buttons
-
+var radioBtn= document.querySelector("billItemTypeWithSettings")
 // get refences to all the settings fields
 
 //get a reference to the add button
-var addBtn= document.querySelector(".button-primary")
+//var addBtn= document.querySelector(".button-primary")
 
 //get a reference to the 'Update settings' button
 
 // create a variables that will keep track of all the settings
 
 // create a variables that will keep track of all three totals.
-var callTotalElement =document.querySelector(".callTotalSettings")
-var smsTotalElement = document.querySelector(".smsTotalSettings")
-var totalElement= dodument.querySelector(".totalSettings")
+//var callTotalElement =document.querySelector(".callTotalSettings")
+//var smsTotalElement = document.querySelector(".smsTotalSettings")
+//var totalElement= dodument.querySelector(".totalSettings")
 
 //add an event listener for when the 'Update settings' button is pressed
 //settingsAddBtn.addEventListener('click', BillSettings);
