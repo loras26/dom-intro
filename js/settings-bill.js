@@ -62,13 +62,13 @@ function addBtnClicker() {
   smsTotalElementSet.innerHTML = smsTotalSet.toFixed(2)
   //sum total of call and sms totals
   var totalCostSet = callTotalSet + smsTotalSet;
-  // returns totalBill
+  // returns total
   totalElementSet.innerHTML = totalCostSet.toFixed(2)
-  //if total exceed 30, turn total amount orange
+  //if total exceed warningLevel, turn total amount orange
   if (totalCostSet >= warningLevel) {
     totalElementSet.classList.add("warning");
   }
-  //if totalBill exceed 50, turn total amount red
+  //if total exceed criticalLevel, turn total amount red
   if (totalCostSet >= criticalLevel) {
     totalElementSet.classList.add("danger")
     
