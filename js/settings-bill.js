@@ -37,12 +37,16 @@ function updateSettings() {
 updateSettingsBtn.addEventListener("click", updateSettings)
 //add an event listener for when the add button is pressed
 function addBtnClicker() {
-
+ 
   var checkedRadioBtn = document.querySelector("input[name='billItemTypeWithSettings']:checked");
   if (checkedRadioBtn) {
     var radioBtn = checkedRadioBtn.value
     // billItemType will be 'call' or 'sms'
   }
+  // stopping the callTotalSet and smsTotalSet if  totalcostSet reaches criticalValue
+  if(callTotalSet + smsTotalSet >= criticalLevel){
+   return 
+}
   //checking if it is call or sms, then update appropriate total
   if (radioBtn === "call") {
     callTotalSet += callCostSettings;
@@ -61,17 +65,15 @@ function addBtnClicker() {
   // returns totalBill
   totalElementSet.innerHTML = totalCostSet.toFixed(2)
   //if total exceed 30, turn total amount orange
-  if (totalCostSet > warningLevel) {
+  if (totalCostSet >= warningLevel) {
     totalElementSet.classList.add("warning");
   }
   //if totalBill exceed 50, turn total amount red
-  if (totalCostSet > criticalLevel) {
+  if (totalCostSet >= criticalLevel) {
     totalElementSet.classList.add("danger")
     
   }
-  if(totalCostSet > criticalLevel){
-    totalCostSet = criticalLevel
-  }
+  
 
 }
 addBtnSet.addEventListener("click", addBtnClicker)
