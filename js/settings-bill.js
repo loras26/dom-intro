@@ -68,7 +68,7 @@ function addBtnClicker() {
   if (totalCostSet >= warningLevel) {
     totalElementSet.classList.add("warning");
   }
-  else if (warningLevel>= totalCostSet) {
+  else if (warningLevel<= totalCostSet) {
     totalElementSet.classList.add("warning");
   }
   //if total exceed criticalLevel, turn total amount red
@@ -76,8 +76,8 @@ function addBtnClicker() {
     totalElementSet.classList.add("danger")
     
   }
-  if (criticalLevel>= totalCostSet) {
-    totalElementSet.classList.add("danger")
+  if (totalCostSet <= criticalLevel) {
+    totalElementSet.classList.remove("danger")
     
   }
   
